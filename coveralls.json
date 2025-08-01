@@ -1,0 +1,13 @@
+{
+  "coverage_options": {
+    "minimum_coverage": 100
+  },
+  "skip_files": [
+    "test/",
+    "lib/phoenix_chat_app/application.ex",
+    "lib/phoenix_chat_app_web.ex",
+    "lib/phoenix_chat_app_web/telemetry.ex",
+    "lib/phoenix_chat_app_web/components/core_components.ex",
+    "lib/phoenix_chat_app_web/channels/user_socket.ex"
+  ]
+}

@@ -9,7 +9,14 @@ defmodule PhoenixChatApp.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
@@ -33,6 +40,7 @@ defmodule PhoenixChatApp.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.7.21"},
+      {:excoveralls, "~> 0.15.2", only: [:test, :dev]}, # tracking test coverage
       {:phoenix_ecto, "~> 4.5"},
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},

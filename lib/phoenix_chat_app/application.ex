@@ -15,6 +15,7 @@ defmodule PhoenixChatApp.Application do
       # Start a worker by calling: PhoenixChatApp.Worker.start_link(arg)
       # {PhoenixChatApp.Worker, arg},
       # Start to serve requests, typically the last entry
+      PhoenixChatAppWeb.Presence,
       PhoenixChatAppWeb.Endpoint
     ]
 
