@@ -20,8 +20,8 @@ defmodule PhoenixChatAppWeb.RoomChannel do
   # It is also common to receive messages from the client and
   # broadcast to everyone in the current topic (room:lobby).
   @impl true
-  def handle_in("shout", payload, socket) do
-    broadcast(socket, "shout", payload)
+  def handle_in("msg", payload, socket) do
+    broadcast(socket, "msg", payload)
     {:noreply, socket}
   end
 

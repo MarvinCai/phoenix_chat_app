@@ -8,7 +8,7 @@ defmodule PhoenixChatAppWeb.UserSocket do
 
   ## Channels
 
-  channel "room:*", PhoenixChatAppWeb.RoomChannel
+  channel "room:lobby", PhoenixChatAppWeb.RoomChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
